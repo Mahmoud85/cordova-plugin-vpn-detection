@@ -1,0 +1,11 @@
+{
+  "name": "cordova-plugin-vpnchecker",
+  "version": "1.0.0",
+  "description": "vpn checker for cordova",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Mahmoud Bakhit",
+  "license": "ISC"
+}

@@ -1,0 +1,51 @@
+//
+//  VPNChecker.swift
+//  AlrajhiRetailApp
+//
+//  Created by Ahmed Hussein on 25/05/2022.
+//  Copyright © 2022 Facebook. All rights reserved.
+//
+
+import Foundation
+
+
+@objc(vpnchecker)
+class vpnchecker: CDVPlugin {
+    var callbackId: String = ""
+  
+ func isVpnActive() -> Bool {
+   let vpnProtocolsKeysIdentifiers = [
+          "tap", "tun", "ppp", "ipsec", "utun"
+      ]
+
+   guard let cfDict = CFNetworkCopySystemProxySettings() else { return false }
+          let nsDict = cfDict.takeRetainedValue() as NSDictionary
+          guard let keys = nsDict["__SCOPED__"] as? NSDictionary,
+              let allKeys = keys.allKeys as? [String] else { return false }
+
+          // Checking for tunneling protocols in the keys
+          for key in allKeys {
+              for protocolId in vpnProtocolsKeysIdentifiers
+                  where key.starts(with: protocolId) {
+                  return true
+              }
+          }
+          return false
+   
+   }
+
+ @objc(checkvpn:)
+    func checkvpn(command: CDVInvokedUrlCommand){
+        guard let callbackId = command.callbackId else { return }
+        var pluginResult: CDVPluginResult
+        if(isVpnActive()){
+            pluginResult = CDVPluginResult(status: CDVCommandStatus_OK)
+        }else{
+            pluginResult = CDVPluginResult(status: CDVCommandStatus_ERROR, messageAs: "VPN_CHECK_UNAVAILABLE")
+        }
+        self.commandDelegate.send(pluginResult, callbackId: callbackId)
+    }
+
+  }
+  
+
