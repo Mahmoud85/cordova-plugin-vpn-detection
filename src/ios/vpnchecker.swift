@@ -1,10 +1,7 @@
 //
-//  VPNChecker.swift
-//  AlrajhiRetailApp
+//  vpnchecker.swift
 //
-//  Created by Ahmed Hussein on 25/05/2022.
-//  Copyright © 2022 Facebook. All rights reserved.
-//
+//  Created by Mahmoud Bakhit 17-01-2024.
 
 import Foundation
 
