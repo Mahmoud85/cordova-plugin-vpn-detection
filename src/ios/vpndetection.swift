@@ -31,7 +31,7 @@ class VPNdetection: CDVPlugin {
    }
 
  @objc(detectActiveVPN:)
-    func detectActiveVPN(_command: CDVInvokedUrlCommand){
+    func detectActiveVPN(_ command: CDVInvokedUrlCommand){
         guard let callbackId = command.callbackId else { return }
         var pluginResult: CDVPluginResult
         if(isVpnActive()){
