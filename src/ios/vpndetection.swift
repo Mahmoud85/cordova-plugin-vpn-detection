@@ -1,14 +1,13 @@
 //
-//  vpnchecker.swift
+//  VpnDetection.swift
 //
 //  Created by Mahmoud Bakhit 17-01-2024.
 
 import Foundation
 
 
-@objc(vpnchecker)
-class vpnchecker: CDVPlugin {
-    var callbackId: String = ""
+@objc(VPNdetection)
+class VPNdetection: CDVPlugin {
   
  func isVpnActive() -> Bool {
    let vpnProtocolsKeysIdentifiers = [
@@ -31,14 +30,14 @@ class vpnchecker: CDVPlugin {
    
    }
 
- @objc(checkvpn:)
-    func checkvpn(command: CDVInvokedUrlCommand){
+ @objc(detectActiveVPN:)
+    func detectActiveVPN(_command: CDVInvokedUrlCommand){
         guard let callbackId = command.callbackId else { return }
         var pluginResult: CDVPluginResult
         if(isVpnActive()){
-            pluginResult = CDVPluginResult(status: CDVCommandStatus_OK)
+            pluginResult = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: "ACTIVEVPN")
         }else{
-            pluginResult = CDVPluginResult(status: CDVCommandStatus_ERROR, messageAs: "VPN_CHECK_UNAVAILABLE")
+            pluginResult = CDVPluginResult(status: CDVCommandStatus_ERROR, messageAs: "INACTIVEVPN")
         }
         self.commandDelegate.send(pluginResult, callbackId: callbackId)
     }

@@ -1,11 +1,25 @@
 {
-  "name": "cordova-plugin-vpnchecker",
+  "name": "cordova-plugin-vpn-detection",
   "version": "1.0.0",
-  "description": "vpn checker for cordova",
-  "main": "index.js",
+  "description": "Check if VPN is Active for Ionic Cordova app",
+  
   "scripts": {
     "test": "test"
   },
   "author": "Mahmoud Bakhit",
-  "license": "ISC"
+  "license": "ISC",
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-vpn-detection",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ]
 }

@@ -1,20 +1,24 @@
-<?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-vpnchecker" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-<name>cordova-plguin-vpnchecker</name><js-module name="cordova-plugin-vpnchecker" src="www/cordova-plugin-vpnchecker.js"><clobbers target="cordova.plugins.cordova-plguin-vpnchecker" />
-</js-module>
-<platform name="android">
-<config-file parent="/*" target="res/xml/config.xml">
-<feature name="cordova-plugin-vpnchecker"><param name="android-package" value="cordova-plugin-vpnchecker.cordova-plugin-vpnchecker" />
-</feature>
-</config-file><config-file parent="/*" target="AndroidManifest.xml" />
-<source-file src="src/android/cordova-plugin-vpnchecker.java" target-dir="src/cordova-plugin-vpnchecker/cordova-plugin-vpnchecker" />
-</platform>
-<platform name="ios">
-<config-file parent="/*" target="config.xml">
-<feature name="cordova-plugin-vpnchecker">
-<param name="ios-package" value="cordova-plugin-vpnchecker" />
-</feature>
-</config-file>
-<source-file src="src/ios/vpnchecker.swift" />
-</platform>
+<?xml version='1.0' encoding='UTF-8'?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-vpn-detection" version="1.0.0">
+    <name>VPN Detection</name>
+    <author>Mahmoud Bakhet</author>
+    <description>Cordova / PhoneGap Plugin for detecting if the device running the app and opened VPN.</description>
+    <keywords>cordova, VPN, checkeer, detection,</keywords>
+    <license>MIT</license>
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    <js-module src="www/vpndetection.js" name="vpndetection">
+        <clobbers target="vpndetection" />
+    </js-module>
+    <platform name="ios">
+       <dependency id="cordova-plugin-add-swift-support" version="^2.0.2"/>
+        <config-file target="config.xml" parent="/*">
+            <feature name="vpndetection">
+                <param name="ios-package" value="vpndetection" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/Bridging-Header.h"/>
+        <source-file src="src/ios/vpndetection.swift" />
+    </platform>
 </plugin>
