@@ -4,6 +4,8 @@ window.vpndetection.detectActiveVPN(successCallback,failureCallback)
 
 Working Example
 
+
+
  checkForVPNDetection() {
    this.platform.ready().then(()=>{
     try {
@@ -32,4 +34,7 @@ Working Example
 
 Credit
  By Mahmoud Bakhit 2024
+
+
+
 
