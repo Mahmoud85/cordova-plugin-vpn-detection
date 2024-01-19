@@ -4,7 +4,7 @@ window.vpndetection.detectActiveVPN(successCallback,failureCallback)
 
 Working Example
 
- `checkForVPNDetection() {
+ checkForVPNDetection() {
    this.platform.ready().then(()=>{
     try {
       console.log("getting inside the function>>", window.VPNdetection)
@@ -28,4 +28,8 @@ Working Example
     } catch (exp) {
     }
    })
-  }`
+  }
+
+Credit
+ By Mahmoud Bakhit 2024
+
