@@ -5,17 +5,20 @@ This Plugin is now for iOS only (Android is on the way) and it is intended to be
 
 
 # Install cordova-vpn-detection plugin
-* Run `npm i cordova-plugin-vpn-detection`
+*  Run `npm i cordova-plugin-vpn-detection`
 * Run `ionic cordova plugin add cordova-plugin-vpn-detection`
 ## TL;DR
 
 # How to sue
+ * I would recommend to use the plugin by implementing the check in two different cases as below:
+        * Make the check when app is initialized
+        * Make the check when app status change from background to foreground, so that vpn check will be done even if user activated the VPN after launching the app.
 
     window.vpndetection.detectActiveVPN(success={
-        // Active VPN detected success = "ACTIVEVPN"
+        // Active VPN detected success result is "ACTIVEVPN"
             console.log(success)
                 },failure=>{
-            // No Active VPN detected failure = "INACTIVEVPN"
+            // No Active VPN detected failure result is "INACTIVEVPN"
         console.log(failure)
 
     }
