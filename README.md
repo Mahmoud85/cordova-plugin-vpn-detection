@@ -5,8 +5,8 @@ This Plugin is now for iOS only (Android is on the way) and it is intended to be
 
 
 # Install cordova-vpn-detection plugin
-* Add to package.json `cordova-plugin-vpn-detection:https://github.com/Mahmoud85/cordova-plugin-vpn-detection`
-* Run 'npm i'
+* Run `npm i cordova-plugin-vpn-detection`
+* Run `ionic cordova plugin add cordova-plugin-vpn-detection`
 ## TL;DR
 
 # How to sue
