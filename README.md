@@ -6,6 +6,7 @@ Working Example
 
 
 
+
  checkForVPNDetection() {
    this.platform.ready().then(()=>{
     try {
