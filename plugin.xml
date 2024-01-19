@@ -21,4 +21,15 @@
         <header-file src="src/ios/Bridging-Header.h"/>
         <source-file src="src/ios/vpndetection.swift" />
     </platform>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="vpndetection">
+                <param name="android-package" value="cordova.plugin.vpn.detection"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/vpndetection.java" target-dir="src/cordova/plugin/vpn/detection"/>
+    </platform>
 </plugin>
