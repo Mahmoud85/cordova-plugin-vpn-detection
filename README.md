@@ -7,7 +7,6 @@ This Plugin is now for iOS only (Android is on the way) and it is intended to be
 # Install cordova-vpn-detection plugin
 *  Run `npm i cordova-plugin-vpn-detection`
 * Run `ionic cordova plugin add cordova-plugin-vpn-detection`
-## TL;DR
 
 # Usage
 
@@ -17,7 +16,7 @@ This Plugin is now for iOS only (Android is on the way) and it is intended to be
 window.vpndetection.detectActiveVPN(successCallback, errorCallback)
 ```
 
-* `=> successCallback` is called with true if VPN is active on device and return param is string `ACTIVEVPN`
+* `=> successCallback` is called with true if VPN is active on device and returned param is string `ACTIVEVPN`
 * `=> errorCallback` is called if there was an error determining if a VPN is active and returned params is string `INACTIVEVPN`
 
 
