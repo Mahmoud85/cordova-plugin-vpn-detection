@@ -25,7 +25,7 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="vpndetection">
-                <param name="android-package" value="cordova.plugin.vpn.detection"/>
+                <param name="android-package" value="cordova.plugin.vpn.detection.vpndetection"/>
                 <param name="onload" value="true"/>
             </feature>
         </config-file>
