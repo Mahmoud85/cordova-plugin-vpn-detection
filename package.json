@@ -1,7 +1,7 @@
 {
   "name": "cordova-plugin-vpn-detection",
   "version": "1.0.0",
-  "description": "Check if VPN is Active for Ionic Cordova app",
+  "description":"Developed for Ionic legacy app to detect if a VPN is open on the mobile device",
   
   "scripts": {
     "test": "test"
