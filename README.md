@@ -23,7 +23,7 @@ window.vpndetection.detectActiveVPN(successCallback, errorCallback)
 # Example
 
 ```
-  var successCallback = function (result) {
+  let successCallback = function (result) {
     let VPNIsActive = result == "ACTIVEVPN"
   };
   let errorCallback = function (failure) {
