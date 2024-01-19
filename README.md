@@ -1,40 +1,42 @@
-How to use
-
-window.vpndetection.detectActiveVPN(successCallback,failureCallback)
-
-Working Example
-
+# Cordova VPN Dectector
+This Plugin is now for iOS only (Android is on the way) and it is intended to be used for legacy Ionic 3 to detect Acttive VPN on mobile device, so it is compitable with
+* Node version 10.x
+* cordova ">=3.0.0"
 
 
-   checkForVPNDetection() {
-   this.platform.ready().then(()=>{
-    try {
-      console.log("getting inside the function>>", window.VPNdetection)
-      window.vpndetection.detectActiveVPN(
-        successCallback => {
-          console.log("successCallback", successCallback)
-          // device has Active VPN // use JailBreak popUp temporarily
-          if (successCallback) {
-            let modal = this.modal.create("CustomPopupPage", { message: 'successCallback' }, { enableBackdropDismiss: false });
-              modal.present();
-          }
-        },
-        // failureCallback is called if there was an error determining if the device is Jailbroken
-        failureCallback => {
-          console.log("successCallback", failureCallback)
-          this.alert.displayErrorToast(failureCallback);
-          let modal = this.modal.create("CustomPopupPage", { message: 'failureCallback' }, { enableBackdropDismiss: true });
-          modal.present();
-        }
-      );
-    } catch (exp) {
+# Install cordova-vpn-detection plugin
+* Add to package.json `cordova-plugin-vpn-detection:https://github.com/Mahmoud85/cordova-plugin-vpn-detection`
+* Run 'npm i'
+## TL;DR
+
+# How to sue
+
+    window.vpndetection.detectActiveVPN(success={
+        // Active VPN detected success = "ACTIVEVPN"
+            console.log(success)
+                },failure=>{
+            // No Active VPN detected failure = "INACTIVEVPN"
+        console.log(failure)
+
     }
-   })
-  }
-
-Credit
- By Mahmoud Bakhit 2024
+)
 
 
-
-
+# @ By:
+___  ___      _                               _  
+|  \/  |     | |                             | | 
+| .  . | __ _| |__  _ __ ___   ___  _   _  __| | 
+| |\/| |/ _` | '_ \| '_ ` _ \ / _ \| | | |/ _` | 
+| |  | | (_| | | | | | | | | | (_) | |_| | (_| | 
+\_|  |_/\__,_|_| |_|_| |_| |_|\___/ \__,_|\__,_| 
+                                                 
+                                                 
+   ______    _   _                               
+   |  ___|  | | | |                              
+   | |_ __ _| |_| |__  _   _                     
+   |  _/ _` | __| '_ \| | | |                    
+   | || (_| | |_| | | | |_| |                    
+   \_| \__,_|\__|_| |_|\__, |                    
+                        __/ |                    
+@ Email:
+## mahmoudfathy0@gmail.com
