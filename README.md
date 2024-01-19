@@ -13,7 +13,7 @@ This Plugin is now for iOS only (Android is on the way) and it is intended to be
  * I would recommend to use the plugin by implementing the check in two different cases as below:
         * Make the check when app is initialized
         * Make the check when app status change from background to foreground, so that vpn check will be done even if user activated the VPN after launching the app.
-
+```
     window.vpndetection.detectActiveVPN(success={
         // Active VPN detected success result is "ACTIVEVPN"
             console.log(success)
@@ -23,6 +23,7 @@ This Plugin is now for iOS only (Android is on the way) and it is intended to be
 
     }
 )
+```
 
 
 # @ By:
