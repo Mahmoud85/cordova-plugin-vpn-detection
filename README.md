@@ -24,10 +24,10 @@ window.vpndetection.detectActiveVPN(successCallback, errorCallback)
 
 ```
   var successCallback = function (result) {
-    var isDevicesRooted = result == 1;
+    let VPNIsActive = result == "ACTIVEVPN"
   };
-  var errorCallback = function (error) {
-    console.error(error);
+  let errorCallback = function (failure) {
+    console.log(failure)
   };
 
 ```
