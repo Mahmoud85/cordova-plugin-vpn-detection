@@ -1,12 +1,17 @@
 var exec = require("cordova/exec");
 
-var VPNdetection = function () {
-    this.name = "VPNdetection";
+function vpndetection() {
+}
+
+vpndetection.prototype.detectActiveVPN = function (successCallback, errorCallback) {
+  exec(
+    successCallback,
+    errorCallback,
+    "vpndetection",
+    "detectActiveVPN",
+    [{}]
+  );
 };
 
-VPNdetection.prototype.detectActiveVPN = function (successCallback, failureCallback) {
-    exec(successCallback, failureCallback, "VPNdetection", "detectActiveVPN", []);
-};
-
-module.exports = new VPNdetection();
+module.exports = new vpndetection();
  

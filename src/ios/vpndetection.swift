@@ -6,8 +6,8 @@
 import Foundation
 
 
-@objc(VPNdetection)
-class VPNdetection: CDVPlugin {
+@objc(vpndetection)
+class vpndetection: CDVPlugin {
   
  func isVpnActive() -> Bool {
    let vpnProtocolsKeysIdentifiers = [
@@ -39,7 +39,7 @@ class VPNdetection: CDVPlugin {
         }else{
             pluginResult = CDVPluginResult(status: CDVCommandStatus_ERROR, messageAs: "INACTIVEVPN")
         }
-        self.commandDelegate.send(pluginResult, callbackId: callbackId)
+        commandDelegate.send(pluginResult, callbackId: callbackId)
     }
 
   }
