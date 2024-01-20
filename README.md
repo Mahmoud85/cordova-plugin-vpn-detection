@@ -48,7 +48,7 @@ iOS and Android.
 
 
 
-# @ By: Mahmoud Fathy © 2024
+# By: Mahmoud Fathy © 2024
 ___  ___      _                               _  
 |  \/  |     | |                             | | 
 | .  . | __ _| |__  _ __ ___   ___  _   _  __| | 
