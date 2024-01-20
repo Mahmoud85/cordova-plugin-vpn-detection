@@ -1,8 +1,7 @@
 {
   "name": "cordova-plugin-vpn-detection",
-  "version": "0.0.1",
-  "description":"Developed for Ionic legacy app to detect if a VPN is open on the mobile device",
-  
+  "version": "0.0.2",
+  "description": "Developed for Ionic legacy app to detect if a VPN is open on the mobile device",
   "scripts": {
     "test": "test"
   },
