@@ -1,5 +1,5 @@
 # Cordova VPN Dectection
-This Plugin works for both Android and iOS platform, and it is intended to be used for legacy Ionic 2,3 and 4 apps to detect Acttive VPN on mobile device, so it is tested tow work with
+This Plugin works for both Android and iOS platform, and it is intended to be used for legacy Ionic 2,3 and 4 apps to detect acttive VPN on mobile device, so it is tested on both platforms.
 * Node version 10.x
 * cordova ">=3.0.0"
 
