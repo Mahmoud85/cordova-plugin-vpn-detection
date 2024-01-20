@@ -4,7 +4,7 @@ This Plugin works for both Android and iOS platform, and it is intended to be us
 * cordova ">=3.0.0"
 
 
-# Install cordova-vpn-detection plugin
+# Install
 *  Run `npm i cordova-plugin-vpn-detection`
 * Run `ionic cordova plugin add cordova-plugin-vpn-detection`
 
