@@ -24,5 +24,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Mahmoud85/cordova-plugin-vpn-detection.git"
-  }
+  },
+  "keywords": [
+    "cordova",
+    "vpn",
+    "vpn detection",
+    "active vpn",
+    "vpn enabled",
+    "ionic",
+    "detect vpn"
+  ]
 }
