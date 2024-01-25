@@ -16,6 +16,9 @@ import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.os.Build;
 import android.content.Context;
+import java.net.NetworkInterface;
+import java.util.Collections;
+import java.util.List;
 
 
 /**
@@ -61,6 +64,19 @@ public class vpndetection extends CordovaPlugin {
                 if (caps.hasTransport(NetworkCapabilities.TRANSPORT_VPN)) {
                     vpnInUse = true;
                     break;
+                }
+            }
+
+             List<NetworkInterface> networksFaces = Collections.list(NetworkInterface.getNetworkInterfaces());
+            for (NetworkInterface networkInterface : networksFaces) {
+                if (networkInterface.isUp()) {
+                    String iFace = networkInterface.getName();
+                    if (iFace != null) {
+                        if (iFace.contains("tun") || iFace.contains("ppp") || iFace.contains("pptp")|| iFace.contains("tap")|| iFace.contains("ipsec")) {
+                            vpnInUse = true;
+                            break;
+                        }
+                    }
                 }
             }
 
